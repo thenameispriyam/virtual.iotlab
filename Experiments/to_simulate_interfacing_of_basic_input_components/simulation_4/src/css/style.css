@@ -2,6 +2,10 @@ h1{
   background-color: beige;
   margin: none;
 }
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
   
 header{
   height: 10vh;
@@ -194,7 +198,9 @@ body{
 .interfacing {
   margin-left: 10px;
   width: 100%;
-  max-width: 750px;
+  max-width: 700px;
+  height: 100%;
+  max-height: 400px;
   overflow: scroll;
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
@@ -202,18 +208,32 @@ body{
 }
 .interfacing img {
   transition: all 0.4s ease;
-  width: 700px;
+  width: 100%;
   height: auto;
+  z-index: 1;
 }
-#pushbutton {
+
+#pushbuttonLeft {
+  background-color: rgba(255, 0, 0, 0);
+  position: absolute;
+  z-index: 5;
+  width: 35px;
+  border: none;
+  height: 15px;
+  margin-left: -133px;
+  margin-top: 84px;
+  cursor: pointer;
+}
+
+#pushbuttonRight {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
   z-index: 2;
-  width: 30px;
+  width: 15px;
   border: none;
-  height: 30px;
-  margin-left: -94px;
-  margin-top: 135px;
+  height: 15px;
+  margin-left: -10px;
+  margin-top: 84px;
   cursor: pointer;
 }
 #buzzerpushbutton {
@@ -231,10 +251,22 @@ body{
 .code {
   width: 48vw;
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 3px;
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
   /* background-color: rgba(4, 59, 79, 0.1); */
+}
+
+.startStop h2{
+  background-color: rgba(4, 59, 79, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .code-head {

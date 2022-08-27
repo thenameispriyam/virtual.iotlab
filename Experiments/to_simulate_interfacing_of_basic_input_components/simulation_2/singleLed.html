@@ -34,16 +34,8 @@
       <div class="if-vid">
         <p class="p-head">Interfacing of Arduino with Push button :</p>
         <div class="interfacing">
-          <img id="ifimg2" src="./src/images/BuzzerOff.jpg" alt="interfacing" />
-          <audio
-            id="myAudio"
-            src="./src/audio/buzzer.mp3"
-            preload="auto"
-          ></audio>
-          <button
-            id="buzzerpushbutton"
-            onclick="changeBuzzerImage();togglePlay();"
-          ></button>
+          <img id="ifimg" src="./src/images/potOff.png" alt="interfacing" />
+          <button id="pushbutton" onclick="changeImage();"></button>
         </div>
         <p class="p-head">Video for reference :</p>
         <div></div>
@@ -54,32 +46,38 @@
         <div>
           <form action="" method="POST">
             <textarea id="arduinoCode" readonly>
-int buz = 3; // Buzzer is connected on Pin No. 3
-int but = 4; // Push Button is connected on Pin No. 4
-int val;
+int sensorValue = 0;
+int outputValue = 0;
 
-void setup( )
+void setup()
 {
-  pinMode(buz, OUTPUT); // Buzzer mode is OUTPUT.
-  pinMode(but, INPUT); // Push Button mode is INPUT.
+  pinMode(A0, INPUT);
+  pinMode(9, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop()
 {
-  val = digitalRead (but); // Reads the value from Push Button whether it is pressed or not.
-  if (val == LOW) 
-  { 
-    digitalWrite(buz,HIGH); // Buzzer is turned ON.
-  }
-  else
-  {
-    digitalWrite(buz,LOW); //  Buzzer is turned OFF.
-  }
+  // read the analog in value:
+  sensorValue = analogRead(A0);
+  // map it to the range of the analog out:
+  outputValue = map(sensorValue, 0, 1023, 0, 255);
+  // change the analog out value:
+  analogWrite(9, outputValue);
+  // print the results to the serial monitor:
+  Serial.print("sensor = ");
+  Serial.print(sensorValue);
+  Serial.print("\t output = ");
+  Serial.println(outputValue);
+  // wait 2 milliseconds before the next loop for the
+  // analog-to-digital converter to settle after the
+  // last reading:
+  delay(2); // Wait for 2 millisecond(s)
 }
             </textarea>
           </form>
         </div>
-        <div></div>
+        <div class="simulationButton"><h2>Start/Stop</h2></div>
       </div>
     </div>
     <script type="text/javascript" src="src/js/main.js"></script>

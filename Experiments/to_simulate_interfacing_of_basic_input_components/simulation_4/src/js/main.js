@@ -8,35 +8,25 @@ function changepage() {
 }
 
 let image_tracker = "off";
-function changeImage() {
+function changePower() {
   let image = document.getElementById("ifimg");
   if (image_tracker == "off") {
-    image.src = "./src/images/LedOn.jpeg";
-    image_tracker = "on";
+    image.src = "./src/images/sliderOnLeft.png";
+    image_tracker = "On";
   } else {
-    image.src = "./src/images/LedOff.jpeg";
+    image.src = "./src/images/sliderOff.png";
     image_tracker = "off";
   }
 }
 
 let image_tracker2 = "off";
-function changeBuzzerImage() {
-  let image = document.getElementById("ifimg2");
+function changeImageLeft() {
+  let image = document.getElementById("ifimg");
   if (image_tracker2 == "off") {
-    image.src = "./src/images/BuzzerOn.gif";
+    image.src = "./src/images/sliderOnLeft.png";
     image_tracker2 = "on";
   } else {
-    image.src = "./src/images/BuzzerOff.jpg";
+    image.src = "./src/images/sliderOnRight.png";
     image_tracker2 = "off";
-  }
-}
-
-let audioElement = document.getElementById("myAudio");
-function togglePlay() {
-  if (audioElement.paused) {
-    audioElement.play();
-    audioElement.loop = true;
-  } else {
-    audioElement.pause();
   }
 }
