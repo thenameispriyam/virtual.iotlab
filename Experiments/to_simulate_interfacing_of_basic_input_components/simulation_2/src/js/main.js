@@ -11,22 +11,10 @@ let image_tracker = "off";
 function changeImage() {
   let image = document.getElementById("ifimg");
   if (image_tracker == "off") {
-    image.src = "./src/images/LedOn.jpeg";
+    image.src = "./src/images/pot100.gif";
     image_tracker = "on";
   } else {
-    image.src = "./src/images/LedOff.jpeg";
+    image.src = "./src/images/pot0.gif";
     image_tracker = "off";
-  }
-}
-
-let image_tracker2 = "off";
-function changeBuzzerImage() {
-  let image = document.getElementById("ifimg2");
-  if (image_tracker2 == "off") {
-    image.src = "./src/images/BuzzerOn.gif";
-    image_tracker2 = "on";
-  } else {
-    image.src = "./src/images/BuzzerOff.jpg";
-    image_tracker2 = "off";
   }
 }
