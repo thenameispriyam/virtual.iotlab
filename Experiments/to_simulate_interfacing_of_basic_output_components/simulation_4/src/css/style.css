@@ -2,6 +2,10 @@ h1{
   background-color: beige;
   margin: none;
 }
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
   
 header{
   height: 10vh;
@@ -204,31 +208,34 @@ body{
 }
 .interfacing img {
   transition: all 0.4s ease;
-  width: 700px;
+  width: 100%;
   height: auto;
+  z-index: 1;
 }
-#pushbutton {
+
+#pushbuttonLeft {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
-  z-index: 2;
-  width: 30px;
+  z-index: 5;
+  width: 35px;
   border: none;
-  height: 30px;
-  margin-left: -222px;
-  margin-top: 97px;
+  height: 15px;
+  margin-left: -133px;
+  margin-top: 84px;
   cursor: pointer;
 }
-/* #pushbutton2 {
+
+#pushbuttonRight {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
   z-index: 2;
   width: 15px;
   border: none;
-  height: 20px;
-  margin-left: -230px;
-  margin-top: 105px;
+  height: 15px;
+  margin-left: -10px;
+  margin-top: 84px;
   cursor: pointer;
-} */
+}
 #buzzerpushbutton {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
@@ -244,10 +251,22 @@ body{
 .code {
   width: 48vw;
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 3px;
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
   /* background-color: rgba(4, 59, 79, 0.1); */
+}
+
+.startStop h2{
+  background-color: rgba(4, 59, 79, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .code-head {
@@ -269,14 +288,6 @@ body{
   resize: none;
 }
 
-.startStop h2{
-  background-color: rgba(4, 59, 79, 0.5);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-weight: 500;
-  cursor: pointer;
-}
 
 
 @media screen and (max-width: 1000px) {

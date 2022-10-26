@@ -250,12 +250,22 @@ body{
   /* background-color: rgba(4, 59, 79, 0.1); */
 }
 
+.startStop h2{
+  background-color: rgba(4, 59, 79, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .code-head {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
 }
+
 #codeInput {
   width: 700px;
   height: 60vh;

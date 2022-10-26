@@ -147,7 +147,7 @@ body{
 .leds {
   background-color: rgb(46, 64, 92, 0.9);
   color: white;
-  width: 9rem;
+  width: 6.5rem;
   text-decoration: none;
   margin: 0 10px 0 10px;
   border-radius: 10px;
@@ -183,20 +183,18 @@ body{
 
 .if-vid {
   width: 48vw;
-  height: 85vh;
+  height: 80vh;
   padding: 3px;
   /* background-color: rgba(4, 59, 79, 0.1); */
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .interfacing {
   margin-left: 10px;
   width: 100%;
-  max-width: 700px;
-  height: 100%;
-  max-height: 700px;
+  max-width: 750px;
   overflow: scroll;
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
@@ -214,21 +212,10 @@ body{
   width: 30px;
   border: none;
   height: 30px;
-  margin-left: -222px;
-  margin-top: 97px;
+  margin-left: -94px;
+  margin-top: 135px;
   cursor: pointer;
 }
-/* #pushbutton2 {
-  background-color: rgba(255, 0, 0, 0);
-  position: absolute;
-  z-index: 2;
-  width: 15px;
-  border: none;
-  height: 20px;
-  margin-left: -230px;
-  margin-top: 105px;
-  cursor: pointer;
-} */
 #buzzerpushbutton {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
@@ -269,14 +256,6 @@ body{
   resize: none;
 }
 
-.startStop h2{
-  background-color: rgba(4, 59, 79, 0.5);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-weight: 500;
-  cursor: pointer;
-}
 
 
 @media screen and (max-width: 1000px) {
