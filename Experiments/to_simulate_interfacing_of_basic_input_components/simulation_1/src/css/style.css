@@ -202,6 +202,7 @@ body{
   border-radius: 10px;
   position: relative;
 }
+
 .interfacing img {
   transition: all 0.4s ease;
   width: 700px;
@@ -210,23 +211,24 @@ body{
 #pushbutton {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   width: 30px;
   border: none;
   height: 30px;
-  margin-left: -94px;
-  margin-top: 135px;
+  margin-left: 605px;
+  margin-top: -320px;
   cursor: pointer;
 }
+
 #buzzerpushbutton {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   width: 25px;
   border: none;
   height: 25px;
-  margin-left: -219px;
-  margin-top: 122px;
+  margin-left: 480px;
+  margin-top: -140px;
   cursor: pointer;
 }
 
